@@ -1,1 +1,4 @@
+com\being_infinity\springboot_beginner\controllers\UserController.class
+com\being_infinity\springboot_beginner\models\User.class
+com\being_infinity\springboot_beginner\services\UserService.class
 com\being_infinity\springboot_beginner\SpringbootBeginnerApplication.class
