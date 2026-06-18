@@ -35,3 +35,22 @@ This project demonstrates the fundamentals of Spring Boot web development, inclu
 - Swagger/OpenAPI
 
 ## 📂 Project Structure
+src
+├── main
+│ ├── java
+│ ├── resources
+│ │ ├── static
+│ │ ├── templates
+│ │ └── application.properties
+│
+└── test
+
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Java 21+
+- Maven
+- Git
+- VS Code / IntelliJ IDEA
