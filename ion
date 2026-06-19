@@ -1,0 +1,159 @@
+[1mdiff --git a/.gitattributes b/.gitattributes[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3b41682[m
+[1m--- /dev/null[m
+[1m+++ b/.gitattributes[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m/mvnw text eol=lf[m
+[32m+[m[32m*.cmd text eol=crlf[m
+[1mdiff --git a/.mvn/wrapper/maven-wrapper.properties b/.mvn/wrapper/maven-wrapper.properties[m
+[1mnew file mode 100644[m
+[1mindex 0000000..216df05[m
+[1m--- /dev/null[m
+[1m+++ b/.mvn/wrapper/maven-wrapper.properties[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32mwrapperVersion=3.3.4[m
+[32m+[m[32mdistributionType=only-script[m
+[32m+[m[32mdistributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip[m
+[1mdiff --git a/.vscode/settings.json b/.vscode/settings.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e012065[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/settings.json[m
+[36m@@ -0,0 +1,4 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m    "java.compile.nullAnalysis.mode": "automatic",[m
+[32m+[m[32m    "java.configuration.updateBuildConfiguration": "interactive"[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/HELP.md b/HELP.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3ef936d[m
+[1m--- /dev/null[m
+[1m+++ b/HELP.md[m
+[36m@@ -0,0 +1,31 @@[m
+[32m+[m[32m# Read Me First[m
+[32m+[m[32mThe following was discovered as part of building this project:[m
+[32m+[m
+[32m+[m[32m* The original package name 'com.being-infinity.springboot-beginner' is invalid and this project uses 'com.being_infinity.springboot_beginner' instead.[m
+[32m+[m
+[32m+[m[32m# Getting Started[m
+[32m+[m
+[32m+[m[32m### Reference Documentation[m
+[32m+[m[32mFor further reference, please consider the following sections:[m
+[32m+[m
+[32m+[m[32m* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)[m
+[32m+[m[32m* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/4.0.7/maven-plugin)[m
+[32m+[m[32m* [Create an OCI image](https://docs.spring.io/spring-boot/4.0.7/maven-plugin/build-image.html)[m
+[32m+[m[32m* [Spring Web](https://docs.spring.io/spring-boot/4.0.7/reference/web/servlet.html)[m
+[32m+[m[32m* [SpringDoc OpenAPI](https://springdoc.org/)[m
+[32m+[m
+[32m+[m[32m### Guides[m
+[32m+[m[32mThe following guides illustrate how to use some features concretely:[m
+[32m+[m
+[32m+[m[32m* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)[m
+[32m+[m[32m* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)[m
+[32m+[m[32m* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)[m
+[32m+[m[32m* [SpringDoc OpenAPI](https://github.com/springdoc/springdoc-openapi-demos/)[m
+[32m+[m
+[32m+[m[32m### Maven Parent overrides[m
+[32m+[m
+[32m+[m[32mDue to Maven's design, elements are inherited from the parent POM to the project POM.[m
+[32m+[m[32mWhile most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.[m
+[32m+[m[32mTo prevent this, the project POM contains empty overrides for these elements.[m
+[32m+[m[32mIf you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.[m
+[32m+[m
+[1mdiff --git a/mvnw b/mvnw[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bd8896b[m
+[1m--- /dev/null[m
+[1m+++ b/mvnw[m
+[36m@@ -0,0 +1,295 @@[m
+[32m+[m[32m#!/bin/sh[m
+[32m+[m[32m# ----------------------------------------------------------------------------[m
+[32m+[m[32m# Licensed to the Apache Software Foundation (ASF) under one[m
+[32m+[m[32m# or more contributor license agreements.  See the NOTICE file[m
+[32m+[m[32m# distributed with this work for additional information[m
+[32m+[m[32m# regarding copyright ownership.  The ASF licenses this file[m
+[32m+[m[32m# to you under the Apache License, Version 2.0 (the[m
+[32m+[m[32m# "License"); you may not use this file except in compliance[m
+[32m+[m[32m# with the License.  You may obtain a copy of the License at[m
+[32m+[m[32m#[m
+[32m+[m[32m#    http://www.apache.org/licenses/LICENSE-2.0[m
+[32m+[m[32m#[m
+[32m+[m[32m# Unless required by applicable law or agreed to in writing,[m
+[32m+[m[32m# software distributed under the License is distributed on an[m
+[32m+[m[32m# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY[m
+[32m+[m[32m# KIND, either express or implied.  See the License for the[m
+[32m+[m[32m# specific language governing permissions and limitations[m
+[32m+[m[32m# under the License.[m
+[32m+[m[32m# ----------------------------------------------------------------------------[m
+[32m+[m
+[32m+[m[32m# ----------------------------------------------------------------------------[m
+[32m+[m[32m# Apache Maven Wrapper startup batch script, version 3.3.4[m
+[32m+[m[32m#[m
+[32m+[m[32m# Optional ENV vars[m
+[32m+[m[32m# -----------------[m
+[32m+[m[32m#   JAVA_HOME - location of a JDK home dir, required when download maven via java source[m
+[32m+[m[32m#   MVNW_REPOURL - repo url base for downloading maven distribution[m
+[32m+[m[32m#   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven[m
+[32m+[m[32m#   MVNW_VERBOSE - true: enable verbose log; debug: trace the mvnw script; others: silence the output[m
+[32m+[m[32m# ----------------------------------------------------------------------------[m
+[32m+[m
+[32m+[m[32mset -euf[m
+[32m+[m[32m[ "${MVNW_VERBOSE-}" != debug ] || set -x[m
+[32m+[m
+[32m+[m[32m# OS specific support.[m
+[32m+[m[32mnative_path() { printf %s\\n "$1"; }[m
+[32m+[m[32mcase "$(uname)" in[m
+[32m+[m[32mCYGWIN* | MINGW*)[m
+[32m+[m[32m  [ -z "${JAVA_HOME-}" ] || JAVA_HOME="$(cygpath --unix "$JAVA_HOME")"[m
+[32m+[m[32m  native_path() { cygpath --path --windows "$1"; }[m
+[32m+[m[32m  ;;[m
+[32m+[m[32mesac[m
+[32m+[m
+[32m+[m[32m# set JAVACMD and JAVACCMD[m
+[32m+[m[32mset_java_home() {[m
+[32m+[m[32m  # For Cygwin and MinGW, ensure paths are in Unix format before anything is touched[m
+[32m+[m[32m  if [ -n "${JAVA_HOME-}" ]; then[m
+[32m+[m[32m    if [ -x "$JAVA_HOME/jre/sh/java" ]; then[m
+[32m+[m[32m      # IBM's JDK on AIX uses strange locations for the executables[m
+[32m+[m[32m      JAVACMD="$JAVA_HOME/jre/sh/java"[m
+[32m+[m[32m      JAVACCMD="$JAVA_HOME/jre/sh/javac"[m
+[32m+[m[32m    else[m
+[32m+[m[32m      JAVACMD="$JAVA_HOME/bin/java"[m
+[32m+[m[32m      JAVACCMD="$JAVA_HOME/bin/javac"[m
+[32m+[m
+[32m+[m[32m      if [ ! -x "$JAVACMD" ] || [ ! -x "$JAVACCMD" ]; then[m
+[32m+[m[32m        echo "The JAVA_HOME environment variable is not defined correctly, so mvnw cannot run." >&2[m
+[32m+[m[32m        echo "JAVA_HOME is set to \"$JAVA_HOME\", but \"\$JAVA_HOME/bin/java\" or \"\$JAVA_HOME/bin/javac\" does not exist." >&2[m
+[32m+[m[32m        return 1[m
+[32m+[m[32m      fi[m
+[32m+[m[32m    fi[m
+[32m+[m[32m  else[m
+[32m+[m[32m    JAVACMD="$([m
+[32m+[m[32m      'set' +e[m
+[32m+[m[32m      'unset' -f command 2>/dev/null[m
+[32m+[m[32m      'command' -v java[m
+[32m+[m[32m    )" || :[m
+[32m+[m[32m    JAVACCMD="$([m
+[32m+[m[32m      'set' +e[m
+[32m+[m[32m      'unset' -f command 2>/dev/null[m
+[32m+[m[32m      'command' -v javac[m
+[32m+[m[32m    )" || :[m
+[32m+[m
+[32m+[m[32m    if [ ! -x "${JAVACMD-}" ] || [ ! -x "${JAVACCMD-}" ]; then[m
+[32m+[m[32m      echo "The java/javac command does not exist in PATH nor is JAVA_HOME set, so mvnw cannot run." >&2[m
+[32m+[m[32m      return 1[m
+[32m+[m[32m    fi[m
+[32m+[m[32m  fi[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m# hash string like Java String::hashCode[m
+[32m+[m[32mhash_string() {[m
+[32m+[m[32m  str="${1:-}" h=0[m
+[32m+[m[32m  while [ -n "$str" ]; do[m
+[32m+[m[32m    char="${str%"${str#?}"}"[m
+[32m+[m[32m    h=$(((h * 31 + $(LC_CTYPE=C printf %d "'$char")) % 4294967296))[m
+[32m+[m[32m    str="${str#?}"[m
+[32m+[m[32m  done[
